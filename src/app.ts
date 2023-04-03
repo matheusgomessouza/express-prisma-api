@@ -6,7 +6,7 @@ const port = 8000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('ExpressJS + Typescript + Prisma + Vitest API');
+  res.end('ExpressJS + Typescript + Prisma + Vitest API BANANA');
 });
 
 server.listen(port, hostname, () => {
