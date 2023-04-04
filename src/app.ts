@@ -1,14 +1,16 @@
-import http from 'http';
+import express from "express";
 
-const hostname = '127.0.0.1';
+const app = express();
 const port = 8000;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('ExpressJS + Typescript + Prisma + Vitest API BANANA');
+app.get("/", (req, res) => {
+	res.send("Hello World!");
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.post("/user-create", (req, res) => {
+  
+});
+
+app.listen(port, () => {
+	console.log(`Example app listening on port ${port}`);
 });
