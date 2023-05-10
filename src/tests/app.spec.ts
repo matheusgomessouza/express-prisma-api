@@ -1,5 +1,5 @@
 import { expect, describe, test } from "vitest";
-import UserCreateController from "../controllers/user-create-controller.ts";
+import { createUser } from "../controllers/user-controller.ts";
 
 interface UserProps {
 	email: string;
@@ -11,14 +11,14 @@ describe("UserCreateController", () => {
 	const password = "password";
 
 	test("should create an user with the given email and password", () => {
-		const returnedUserData = new UserCreateController(email, password);
+		const returnedUserData = createUser(email, password);
 	
 		expect(returnedUserData.email).toBe("test@example.com");
 		expect(returnedUserData.password).toBe("password");
 	});
 
 	test("should return an object that has email and password properties", () => {
-		const userCreatedObject = new UserCreateController(email, password);
+		const userCreatedObject = createUser(email, password);
 
 		expect(userCreatedObject).toBeTypeOf("object");
 		expect(userCreatedObject).toHaveProperty("email");
