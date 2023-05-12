@@ -14,7 +14,9 @@
     "lint": "npx eslint src/**/*.ts",
     "lint-fix": "eslint --fix src/**/*.ts",
     "pretty": "prettier --write 'src/**/*.ts'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pre-commit": "npm run lint-fix && npm run pretty",
+    "pre-push": "npm run lint"
   },
   "husky": {
     "hooks": {
@@ -29,6 +31,7 @@
     "@typescript-eslint/parser": "^5.57.1",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
     "prettier": "^2.8.8",
