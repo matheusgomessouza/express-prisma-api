@@ -13,7 +13,8 @@
     "coverage": "vitest run --coverage",
     "lint": "npx eslint src/**/*.ts",
     "lint-fix": "eslint --fix src/**/*.ts",
-    "pretty": "prettier --write 'src/**/*.ts'"
+    "pretty": "prettier --write 'src/**/*.ts'",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
