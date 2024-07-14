@@ -1,5 +1,5 @@
 # express-prisma-api
-API created using ExpressJS framework + Prisma ORM
+An API application to perform CRUD operations in a database. Created using Express framework and Prisma ORM
 
 **👨‍💻 Tecnologias / Technologies**
 
